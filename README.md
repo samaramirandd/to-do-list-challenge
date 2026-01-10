@@ -15,12 +15,17 @@ Este projeto foi desenvolvido como parte do desafio técnico para a IT’S Possi
 
 ## Arquitetura do Projeto
 A estrutura do projeto foi desenhada seguindo os princípios de Separação de Responsabilidades (SoC) e Baixo Acoplamento, facilitando a manutenção futura.
-` todo-challenge/
-├── backend/
-│   ├── models/      # Esquema do MongoDB (Mongoose)
-│   ├── routes/      # Definição dos Endpoints RESTful
-│   ├── controllers/ # Lógica de negócio (opcional, para maior organização)
-│   └── server.js    # Ponto de entrada do servidor
+| backend/
+ ├── controllers/
+ │   └── taskController.js
+ ├── models/
+ │   └── Task.js
+ ├── routes/
+ │   └── taskRoutes.js
+ ├── config/
+ │   └── db.js
+ ├── server.js
+ └── .env
 ├── frontend/        # Aplicação React
 │   ├── src/
 │   │   ├── components/ # Componentes reutilizáveis
@@ -48,7 +53,7 @@ Bash
 ` cd backend
 npm install `
 
-# Crie um ficheiro .env com: MONGODB_URI=sua_conexao_aqui
+### Crie um ficheiro .env com: MONGODB_URI=sua_conexao_aqui
 ` npm start `
 
 ## 2. Configuração do Frontend
